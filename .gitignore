@@ -1,0 +1,4 @@
+.vercel
+.angular/
+dist/
+node_modules/

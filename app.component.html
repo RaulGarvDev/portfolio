@@ -1,0 +1,144 @@
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<section id="inicio" class="hero band">
+  <div class="wrap inner">
+    <header class="bar rise" style="--i: 0">
+      <a class="signature" href="#inicio" aria-label="Inicio, Raúl González de la Aleja">
+        <span class="signature-mark" aria-hidden="true">RG</span>
+        <span class="signature-copy"><strong>RAÚL GONZÁLEZ</strong><small>INGENIERÍA DE SOFTWARE</small></span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="#quien-soy">Quién soy</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#ia">IA</a>
+        @if (hasProjects) {
+          <a href="#proyectos">Proyectos</a>
+        }
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="theme-toggle" type="button" (click)="theme.toggle()">{{ theme.nextLabel() }}</button>
+    </header>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow rise" style="--i: 1"><span class="signal-dot"></span> BITÁCORA DE MISIÓN <span>/</span> MADRID</p>
+        <h1 class="rise" style="--i: 2"><span>Raúl González</span><span>de la Aleja</span></h1>
+        <p class="role rise" style="--i: 3">Guardián del código <span>Java · Angular</span></p>
+        <p class="lead rise" style="--i: 4">
+          Mi misión: desarrollar y mantener aplicaciones empresariales para el sector bancario, desde el backend con
+          Java y Spring Boot hasta el frontend con Angular.
+        </p>
+
+        <div class="links rise" style="--i: 5">
+          <a class="btn primary" [href]="'mailto:' + contact.email">Contactar <span aria-hidden="true">↗</span></a>
+          <a class="btn" [href]="contact.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" [href]="contact.github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        @if (current; as job) {
+          <div class="now-card rise" style="--i: 6">
+            <app-logo [file]="job.logo" [initials]="job.initials" />
+            <p>
+              <small>POSICIÓN ACTUAL</small>
+              <strong>{{ job.role }}</strong>
+              {{ job.company }} · Madrid
+            </p>
+          </div>
+        }
+      </div>
+
+      <aside class="hero-aside rise" style="--i: 4" aria-label="Áreas de especialización">
+        <p class="aside-label"><span>01</span> / MAPA DE SISTEMAS</p>
+        <h2>Una buena misión empieza con un equipo que conecta.</h2>
+        <p class="orchestration-note">
+          Coordino agentes especializados con instrucciones, contexto y skills reutilizables para llevar cada tarea
+          del análisis a la revisión.
+        </p>
+        <ul class="specialties">
+          <li><span>BACKEND</span><strong>Java <i>+</i> Spring</strong></li>
+          <li><span>FRONTEND</span><strong>Angular <i>+</i> TypeScript</strong></li>
+          <li><span>DATOS</span><strong>SQL <i>+</i> Oracle</strong></li>
+          <li><span>IA</span><strong>Agentes <i>+</i> skills</strong></li>
+        </ul>
+        <ul class="ai-stack" aria-label="Prácticas de orquestación de agentes">
+          <li>CONTEXTO</li>
+          <li>SKILLS</li>
+          <li>ORQUESTACIÓN</li>
+          <li>REVISIÓN</li>
+        </ul>
+        <p class="coordinate">40°25′ N&nbsp; 3°42′ O <span>●</span> BASE DE OPERACIONES: MADRID</p>
+      </aside>
+    </div>
+
+    <app-java-cat />
+  </div>
+</section>
+
+<main id="contenido">
+  <section id="quien-soy" class="section">
+    <div class="wrap about">
+      <div>
+        <p class="section-kicker">01 / PERFIL</p>
+        <h2>El piloto detrás del código</h2>
+        <p>
+          Empecé en la logística y di el salto al software con el ciclo de Desarrollo de Aplicaciones Multiplataforma.
+          Llevo más de cuatro años construyendo y manteniendo aplicaciones internas de un banco con Java, Spring Boot y
+          Angular.
+        </p>
+        <p class="muted">
+          Soy constante y me gusta mejorar lo que hago. El deporte me enseñó disciplina y trabajo en equipo, y es lo
+          que intento llevar a cada proyecto.
+        </p>
+      </div>
+      <figure class="portrait">
+        <img
+          src="assets/raul-guardian.svg"
+          width="480"
+          height="480"
+          alt="Ilustración anime de Raúl como guardián espacial, con pelo oscuro despeinado y sable de energía azul"
+        />
+        <figcaption>RAÚL GONZÁLEZ <span>·</span> GUARDIÁN DEL CÓDIGO</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="trayectoria" class="section alt">
+    <div class="wrap"><p class="section-kicker">02 / REGISTRO DE MISIONES</p><app-experience /></div>
+  </section>
+
+  <section id="ia" class="section">
+    <div class="wrap">
+      <p class="section-kicker">03 / TECNOLOGÍA DE LA TRIPULACIÓN</p>
+      <h2>Agentes especializados, skills reutilizables</h2>
+      <p>
+        En mi trabajo de desarrollo preparo agentes con instrucciones, skills y contexto especializado. Coordino
+        tareas de análisis, implementación y revisión, e integro y valido sus resultados. La IA acelera el proceso;
+        las decisiones técnicas y la validación final siguen siendo responsabilidad del equipo.
+      </p>
+      <ol class="ai-workflow" aria-label="Flujo de trabajo con agentes de IA">
+        <li><span>01</span><strong>Definir el contexto</strong><small>Instrucciones y objetivo claros</small></li>
+        <li><span>02</span><strong>Preparar skills</strong><small>Conocimiento reutilizable</small></li>
+        <li><span>03</span><strong>Orquestar agentes</strong><small>Tareas y responsabilidades</small></li>
+        <li><span>04</span><strong>Revisar e integrar</strong><small>Validación bajo control humano</small></li>
+      </ol>
+      <p class="muted">Me interesa cómo colaboran desarrolladores y agentes y qué procesos del equipo se pueden mejorar de forma responsable.</p>
+    </div>
+  </section>
+
+  @if (hasProjects) {
+    <section id="proyectos" class="section alt">
+      <div class="wrap"><p class="section-kicker">04 / ARCHIVO</p><app-projects /></div>
+    </section>
+  }
+
+  <section id="contacto" class="section band contact">
+    <div class="wrap">
+      <p class="section-kicker">05 / SIGUIENTE MISIÓN</p>
+      <h2>Contacto</h2>
+      <p>Si quieres conocer mi trayectoria o hablar de una colaboración, escríbeme.</p>
+      <a class="mail" [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© {{ year }} Raúl González de la Aleja</div></footer>

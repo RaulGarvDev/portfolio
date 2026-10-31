@@ -1,0 +1,6 @@
+Logotipos opcionales: public/assets/logos/
+  bbva.svg · optimissa.svg · versys.svg · hgadvance.svg
+Si falta un logotipo, la web muestra las iniciales de la empresa.
+
+El perfil usa public/assets/raul-guardian.svg, una ilustración vectorial original.
+Puedes sustituirla por un retrato propio manteniendo ese nombre de archivo.
