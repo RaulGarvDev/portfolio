@@ -3,6 +3,8 @@
 Portfolio Angular con componentes standalone, signals y `OnPush`.
 El contenido se edita en `portfolio.ts`.
 
+Código fuente: https://github.com/RaulGarvDev/portfolio
+
 Demo publicada: https://portfolio-eight-neon-rvd1r3ycpk.vercel.app/
 
 ## Requisitos
@@ -47,10 +49,10 @@ y publica `dist/portfolio/browser`.
 
 ### Desde el terminal
 
-Con Vercel CLI instalado y autenticado, ejecuta `vercel --prod` desde la raíz
-del proyecto. Este método despliega el estado local actual. El proyecto está
-publicado desde la CLI; para despliegues automáticos al hacer `push`, conéctalo
-a un repositorio Git desde el panel de Vercel.
+El proyecto está conectado al repositorio privado
+[`RaulGarvDev/portfolio`](https://github.com/RaulGarvDev/portfolio). Cada `push`
+a `main` inicia un despliegue de producción y las demás ramas generan previews.
+También puedes desplegar manualmente con `vercel --prod`.
 
 El plan Hobby es gratuito para proyectos personales y está sujeto a sus límites
 y condiciones de uso. Consulta la [documentación del plan Hobby](https://vercel.com/docs/plans/hobby).
