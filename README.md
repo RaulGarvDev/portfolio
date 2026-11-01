@@ -6,7 +6,7 @@ Los datos del portfolio se editan en `src/app/content/portfolio.data.ts`.
 ## Estructura del proyecto
 
 - `src/app/app.component.ts`: composición de la página.
-- `src/app/features/`: secciones de trayectoria y proyectos, y la interacción de Java.
+- `src/app/features/`: secciones de trayectoria y proyectos, la interacción de Java y el retrato interactivo.
 - `src/app/shared/`: componentes reutilizables, como el logotipo de empresa.
 - `src/app/core/`: servicios globales, como la gestión del tema.
 - `src/app/content/`: tipos y datos del portfolio.
@@ -39,9 +39,9 @@ en `dist/portfolio`.
 
 Coloca los logotipos SVG en `public/assets/logos/` con los nombres indicados en
 `src/app/content/portfolio.data.ts`: `bbva.svg`, `optimissa.svg`, `versys.svg` y `hgadvance.svg`.
-Si falta un archivo, se muestran las iniciales de la empresa. El perfil usa la
-ilustración original `public/assets/raul-guardian.svg`, personalizada con
-rasgos inspirados en la foto de referencia.
+Si falta un archivo, se muestran las iniciales de la empresa. La ilustración
+interactiva del perfil está en
+`src/app/features/guardian-portrait/guardian-portrait.component.html`.
 
 ## Publicar en Vercel
 

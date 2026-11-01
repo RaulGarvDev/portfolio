@@ -3,12 +3,13 @@ import { ThemeService } from './core/theme/theme.service';
 import { CONTACT, EXPERIENCE, PROJECTS } from './content/portfolio.data';
 import { ExperienceSectionComponent } from './features/experience/experience-section.component';
 import { JavaCatComponent } from './features/java-cat/java-cat.component';
+import { GuardianPortraitComponent } from './features/guardian-portrait/guardian-portrait.component';
 import { ProjectsSectionComponent } from './features/projects/projects-section.component';
 import { CompanyLogoComponent } from './shared/company-logo/company-logo.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CompanyLogoComponent, JavaCatComponent, ExperienceSectionComponent, ProjectsSectionComponent],
+  imports: [CompanyLogoComponent, JavaCatComponent, GuardianPortraitComponent, ExperienceSectionComponent, ProjectsSectionComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
 })

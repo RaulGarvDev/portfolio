@@ -141,7 +141,8 @@ app-java-cat { --fur: #C7D1E2; position: absolute; right: 2rem; bottom: 0; displ
 .about h2 { max-width: 13ch; }
 .about p:not(.section-kicker) { max-width: 48rem; }
 .portrait { position: relative; margin: 0; overflow: hidden; background: #07101D; border: 1px solid var(--line); }
-.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.portrait app-guardian-portrait { display: block; width: 100%; aspect-ratio: 1; }
+.portrait app-guardian-portrait svg { display: block; width: 100%; height: auto; }
 .portrait figcaption { position: absolute; right: .75rem; bottom: .75rem; left: .75rem; padding: .55rem .7rem; color: #EAF3FF; background: rgb(5 10 19 / .8); border-left: 2px solid var(--signal); font: .62rem var(--mono); letter-spacing: .06em; }
 .portrait figcaption span { color: var(--signal); }
 
