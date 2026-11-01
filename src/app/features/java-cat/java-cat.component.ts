@@ -10,7 +10,12 @@ import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, inject, sig
 })
 export class JavaCatComponent {
   private readonly cat = viewChild.required<ElementRef<HTMLElement>>('cat');
-  private readonly lines = ['¡Miau, comandante!', 'Prrr…', 'Java, lista para la misión.'];
+  private readonly lines = [
+    '¡Miau, comandante!',
+    'Prrr…',
+    'Java, lista para la misión.',
+    'Derrotaremos a todos los bug',
+  ];
   private clicks = 0;
   private timer: ReturnType<typeof setTimeout> | undefined;
 
