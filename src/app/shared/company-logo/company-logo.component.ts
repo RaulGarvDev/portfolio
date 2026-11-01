@@ -6,6 +6,7 @@ import { ChangeDetectionStrategy, Component, computed, input, signal } from '@an
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'logo' },
   templateUrl: './company-logo.component.html',
+  styleUrl: './company-logo.component.css',
 })
 export class CompanyLogoComponent {
   readonly file = input<string>();

@@ -1,0 +1,26 @@
+:host {
+  display: grid;
+  width: 2.8rem;
+  flex: none;
+  aspect-ratio: 1;
+  place-items: center;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--accent);
+  font: .75rem var(--mono);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  padding: .45rem;
+  object-fit: contain;
+}
+
+@media (max-width: 38rem) {
+  :host {
+    width: 2.4rem;
+  }
+}

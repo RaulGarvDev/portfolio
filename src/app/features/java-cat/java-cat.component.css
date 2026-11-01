@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+.peek {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.peek svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.fur { fill: var(--fur); }
+.iris { fill: #65c8ff; }
+.pupil { fill: #101a2a; }
+.nose { fill: #7186a5; }
+.whiskers { stroke: rgb(245 245 233 / .58); stroke-width: 1.2; stroke-linecap: round; }
+.collar { fill: #090e18; stroke: #52b9ff; stroke-width: 1.5; }
+.collar-edge { fill: none; stroke: #a6e1ff; stroke-width: 1; }
+.collar-name { fill: #eaf6ff; font: 700 7px var(--mono); letter-spacing: 1px; }
+
+.bubble {
+  position: absolute;
+  right: 100%;
+  bottom: 55%;
+  padding: .35rem .8rem;
+  color: #07101d;
+  background: var(--signal);
+  border-radius: 2px;
+  font-size: .85rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .2s, transform .2s;
+  pointer-events: none;
+}
+
+.bubble.show {
+  opacity: 1;
+  transform: none;
+}

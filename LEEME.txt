@@ -1,6 +1,1 @@
-Logotipos opcionales: public/assets/logos/
-  bbva.svg · optimissa.svg · versys.svg · hgadvance.svg
-Si falta un logotipo, la web muestra las iniciales de la empresa.
-
-El perfil usa una ilustración vectorial interactiva en
-src/app/features/guardian-portrait/guardian-portrait.component.html.
+Consulta README.md para instalación, desarrollo, pruebas, recursos y despliegue.

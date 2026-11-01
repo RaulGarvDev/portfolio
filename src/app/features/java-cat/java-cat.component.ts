@@ -6,6 +6,7 @@ import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, inject, sig
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '(document:pointermove)': 'lookAt($event)' },
   templateUrl: './java-cat.component.html',
+  styleUrl: './java-cat.component.css',
 })
 export class JavaCatComponent {
   private readonly cat = viewChild.required<ElementRef<HTMLElement>>('cat');

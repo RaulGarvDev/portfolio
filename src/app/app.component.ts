@@ -12,6 +12,7 @@ import { CompanyLogoComponent } from './shared/company-logo/company-logo.compone
   imports: [CompanyLogoComponent, JavaCatComponent, GuardianPortraitComponent, ExperienceSectionComponent, ProjectsSectionComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   protected readonly theme = inject(ThemeService);

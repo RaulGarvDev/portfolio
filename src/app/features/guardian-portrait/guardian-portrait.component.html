@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title description">
   <title id="title">Raúl, guardián del código</title>
-  <desc id="description">Ilustración anime de Raúl como guardián espacial, con pelo oscuro despeinado y una hoja de energía azul.</desc>
+  <desc id="description">Ilustración de Raúl como guardián espacial. Al pasar el puntero, el sable traza una V: desciende por el torso y cruza hacia arriba al lado opuesto.</desc>
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#142943"/>
@@ -70,9 +70,9 @@
   <circle cx="248" cy="365" r="9" fill="#4AB5FF" fill-opacity=".85"/>
   <circle cx="248" cy="365" r="18" fill="#4AB5FF" fill-opacity=".22"/>
   <path d="M278 234c12-10 27-9 39 2l9 15-23 27c-7-14-19-24-37-29Z" fill="url(#cloak)" stroke="#52769A" stroke-opacity=".8" stroke-width="2"/>
-  <g class="saber-grip">
-    <path d="m289 222 119-147" fill="none" stroke="#4AAEFF" stroke-linecap="round" stroke-opacity=".45" stroke-width="18" filter="url(#soft-glow)"/>
-    <path d="m289 222 119-147" fill="none" stroke="url(#blade)" stroke-linecap="round" stroke-width="7"/>
+  <g class="saber-grip" [class.pointer-active]="pointerInside()" [attr.transform]="'translate(' + saberPose().x + ' ' + saberPose().y + ') rotate(' + saberPose().angle + ' 280 242)'">
+    <path class="saber-aura" d="m289 222 103-126" fill="none" stroke="#4AAEFF" stroke-linecap="round" stroke-opacity=".45" stroke-width="18" filter="url(#soft-glow)"/>
+    <path d="m289 222 103-126" fill="none" stroke="url(#blade)" stroke-linecap="round" stroke-width="7"/>
     <path d="m285 220 9 8-11 13-10-9Z" fill="#D9F4FF" stroke="#62BCFF" stroke-width="2"/>
     <path d="m271 222 23 19m-27-9 13-16" fill="none" stroke="#A8DFFF" stroke-linecap="round" stroke-width="4"/>
     <path d="M254 239c7-8 18-14 27-16l12 12c-5 12-15 21-26 24-10 2-18-10-13-20Z" fill="url(#skin)" stroke="#E4B29A" stroke-width="2"/>

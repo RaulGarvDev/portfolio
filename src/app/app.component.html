@@ -2,7 +2,7 @@
 
 <section id="inicio" class="hero band">
   <div class="wrap inner">
-    <header class="bar rise" style="--i: 0">
+    <header class="bar rise rise--0">
       <a class="signature" href="#inicio" aria-label="Inicio, Raúl González de la Aleja">
         <span class="signature-mark" aria-hidden="true">RG</span>
         <span class="signature-copy"><strong>RAÚL GONZÁLEZ</strong><small>INGENIERÍA DE SOFTWARE</small></span>
@@ -21,22 +21,22 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow rise" style="--i: 1"><span class="signal-dot"></span> BITÁCORA DE MISIÓN <span>/</span> MADRID</p>
-        <h1 class="rise" style="--i: 2"><span>Raúl González</span><span>de la Aleja</span></h1>
-        <p class="role rise" style="--i: 3">Guardián del código <span>Java · Angular</span></p>
-        <p class="lead rise" style="--i: 4">
+        <p class="eyebrow rise rise--1"><span class="signal-dot"></span> BITÁCORA DE MISIÓN <span>/</span> MADRID</p>
+        <h1 class="rise rise--2"><span>Raúl González</span><span>de la Aleja</span></h1>
+        <p class="role rise rise--3">Guardián del código <span>Java · Angular</span></p>
+        <p class="lead rise rise--4">
           Mi misión: desarrollar y mantener aplicaciones empresariales para el sector bancario, desde el backend con
           Java y Spring Boot hasta el frontend con Angular.
         </p>
 
-        <div class="links rise" style="--i: 5">
+        <div class="links rise rise--5">
           <a class="btn primary" [href]="'mailto:' + contact.email">Contactar <span aria-hidden="true">↗</span></a>
           <a class="btn" [href]="contact.linkedin" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn" [href]="contact.github" target="_blank" rel="noopener">GitHub</a>
         </div>
 
         @if (current; as job) {
-          <div class="now-card rise" style="--i: 6">
+          <div class="now-card rise rise--6">
             <app-logo [file]="job.logo" [initials]="job.initials" />
             <p>
               <small>POSICIÓN ACTUAL</small>
@@ -47,7 +47,7 @@
         }
       </div>
 
-      <aside class="hero-aside rise" style="--i: 4" aria-label="Áreas de especialización">
+      <aside class="hero-aside rise rise--4" aria-label="Áreas de especialización">
         <p class="aside-label"><span>01</span> / MAPA DE SISTEMAS</p>
         <h2>Una buena misión empieza con un equipo que conecta.</h2>
         <p class="orchestration-note">

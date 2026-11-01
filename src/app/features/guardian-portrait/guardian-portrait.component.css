@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.saber-grip {
+  transform-box: view-box;
+  transform-origin: 280px 242px;
+}
+
+.saber-aura {
+  transition: stroke-opacity 180ms ease-out;
+}
+
+.saber-grip.pointer-active .saber-aura {
+  stroke-opacity: .7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .saber-aura {
+    transition: none;
+  }
+}

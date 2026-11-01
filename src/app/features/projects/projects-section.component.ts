@@ -5,6 +5,7 @@ import { PROJECTS } from '../../content/portfolio.data';
   selector: 'app-projects',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './projects-section.component.html',
+  styleUrl: './projects-section.component.css',
 })
 export class ProjectsSectionComponent {
   protected readonly projects = PROJECTS;

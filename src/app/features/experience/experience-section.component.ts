@@ -7,6 +7,7 @@ import { CompanyLogoComponent } from '../../shared/company-logo/company-logo.com
   imports: [CompanyLogoComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './experience-section.component.html',
+  styleUrl: './experience-section.component.css',
 })
 export class ExperienceSectionComponent {
   protected readonly filters = TECH_FILTERS;

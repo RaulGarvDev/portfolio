@@ -35,6 +35,12 @@ Abre la URL que indique Angular CLI (normalmente `http://localhost:4200`).
 Para generar la versión de producción, ejecuta `npm run build`; el resultado queda
 en `dist/portfolio`.
 
+## Tests y CI
+
+Ejecuta `npm test` para las pruebas unitarias en modo no interactivo o
+`npm run test:watch` durante el desarrollo. El workflow de GitHub Actions ejecuta
+tests y build en cada `push` y pull request; solo valida, no despliega.
+
 ## Recursos opcionales
 
 Coloca los logotipos SVG en `public/assets/logos/` con los nombres indicados en
@@ -54,15 +60,29 @@ y publica `dist/portfolio/browser`.
 2. En Vercel, selecciona **Add New → Project** e importa el repositorio.
 3. Comprueba que el framework sea **Angular** y que la carpeta de salida sea
    `dist/portfolio/browser`. Vercel usará la configuración del proyecto.
-4. Pulsa **Deploy**. Los siguientes `push` a la rama principal publicarán cambios
-   automáticamente.
+4. Pulsa **Deploy**. Si la integración Git está habilitada, Vercel publicará
+   previews y producción según la rama configurada en el proyecto. Confirma la
+   rama de producción y sus protecciones en la configuración de Vercel.
 
 ### Desde el terminal
 
-El proyecto está conectado al repositorio privado
-[`RaulGarvDev/portfolio`](https://github.com/RaulGarvDev/portfolio). Cada `push`
-a `main` inicia un despliegue de producción y las demás ramas generan previews.
-También puedes desplegar manualmente con `vercel --prod`.
+El repositorio privado es
+[`RaulGarvDev/portfolio`](https://github.com/RaulGarvDev/portfolio). Si su
+integración con Vercel está activa, los despliegues seguirán las ramas y reglas
+configuradas en el panel; no se asume aquí cuál rama publica producción. El
+comando `vercel --prod` inicia un despliegue de producción: úsalo solo tras
+revisar el cambio y su preview, nunca como validación de CI.
 
 El plan Hobby es gratuito para proyectos personales y está sujeto a sus límites
 y condiciones de uso. Consulta la [documentación del plan Hobby](https://vercel.com/docs/plans/hobby).
+
+### Verificación y soporte
+
+Antes de promover un cambio, revisa el preview y comprueba navegación, cambio de
+tema, secciones, imágenes, consola y vista móvil. Después del despliegue, repite
+esas comprobaciones en la URL de producción y consulta los logs de despliegue del
+proveedor si falla. El workflow CI no publica ni altera producción.
+
+La aplicación no configura telemetría propia ni servicios backend. Para revertir
+un despliegue, usa los mecanismos de rollback de Vercel y confirma el resultado
+en producción; no ejecutes cambios de producción desde una validación automática.

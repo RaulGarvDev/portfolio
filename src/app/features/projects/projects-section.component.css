@@ -1,0 +1,34 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: .8rem;
+}
+
+.project {
+  display: block;
+  min-width: 0;
+  padding: 1.3rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: border-color .2s, transform .2s;
+}
+
+.project:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.project strong {
+  display: block;
+  margin-bottom: .35rem;
+  font-size: 1.15rem;
+}
+
+.project small {
+  display: block;
+  margin-top: .8rem;
+  color: var(--accent);
+  font: .7rem var(--mono);
+}
