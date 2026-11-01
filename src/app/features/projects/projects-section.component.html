@@ -1,0 +1,10 @@
+<h2>Proyectos</h2>
+<div class="projects">
+  @for (project of projects; track project.name) {
+    <a class="project" [href]="project.url" target="_blank" rel="noopener">
+      <strong>{{ project.name }}</strong>
+      <span class="muted">{{ project.description }}</span>
+      <small>{{ project.tech.join(' · ') }}</small>
+    </a>
+  }
+</div>

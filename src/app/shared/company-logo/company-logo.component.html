@@ -1,0 +1,5 @@
+@if (url(); as src) {
+  <img [src]="src" alt="" (error)="failed.set(true)" />
+} @else {
+  <b>{{ initials() }}</b>
+}

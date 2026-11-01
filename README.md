@@ -1,7 +1,17 @@
 # Portfolio — Raúl González de la Aleja
 
 Portfolio Angular con componentes standalone, signals y `OnPush`.
-El contenido se edita en `portfolio.ts`.
+Los datos del portfolio se editan en `src/app/content/portfolio.data.ts`.
+
+## Estructura del proyecto
+
+- `src/app/app.component.ts`: composición de la página.
+- `src/app/features/`: secciones de trayectoria y proyectos, y la interacción de Java.
+- `src/app/shared/`: componentes reutilizables, como el logotipo de empresa.
+- `src/app/core/`: servicios globales, como la gestión del tema.
+- `src/app/content/`: tipos y datos del portfolio.
+- Las plantillas Angular se mantienen en archivos `.component.html` junto a sus componentes.
+- `public/assets/`: imágenes e iconos estáticos.
 
 Código fuente: https://github.com/RaulGarvDev/portfolio
 
@@ -28,7 +38,7 @@ en `dist/portfolio`.
 ## Recursos opcionales
 
 Coloca los logotipos SVG en `public/assets/logos/` con los nombres indicados en
-`portfolio.ts`: `bbva.svg`, `optimissa.svg`, `versys.svg` y `hgadvance.svg`.
+`src/app/content/portfolio.data.ts`: `bbva.svg`, `optimissa.svg`, `versys.svg` y `hgadvance.svg`.
 Si falta un archivo, se muestran las iniciales de la empresa. El perfil usa la
 ilustración original `public/assets/raul-guardian.svg`, personalizada con
 rasgos inspirados en la foto de referencia.

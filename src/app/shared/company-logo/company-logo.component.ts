@@ -5,15 +5,9 @@ import { ChangeDetectionStrategy, Component, computed, input, signal } from '@an
   selector: 'app-logo',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'logo' },
-  template: `
-    @if (url(); as src) {
-      <img [src]="src" alt="" (error)="failed.set(true)" />
-    } @else {
-      <b>{{ initials() }}</b>
-    }
-  `,
+  templateUrl: './company-logo.component.html',
 })
-export class CompanyLogo {
+export class CompanyLogoComponent {
   readonly file = input<string>();
   readonly initials = input.required<string>();
 

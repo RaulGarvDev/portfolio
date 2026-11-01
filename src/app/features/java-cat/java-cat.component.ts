@@ -5,32 +5,9 @@ import { ChangeDetectionStrategy, Component, DestroyRef, ElementRef, inject, sig
   selector: 'app-java-cat',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '(document:pointermove)': 'lookAt($event)' },
-  template: `
-    <button
-      #cat
-      class="peek"
-      type="button"
-      aria-label="Acariciar a Java, mi gata"
-      [style.--dx]="dx()"
-      [style.--dy]="dy()"
-      (click)="pet()"
-    >
-      <svg viewBox="0 0 120 108" aria-hidden="true">
-        <path class="fur" d="M24 47 30 6 54 34ZM96 47 90 6 66 34Z" />
-        <circle class="fur" cx="60" cy="62" r="41" />
-        <g transform="translate(44 53)"><circle class="iris" r="8" /><ellipse class="pupil" rx="2.6" ry="6" /></g>
-        <g transform="translate(76 53)"><circle class="iris" r="8" /><ellipse class="pupil" rx="2.6" ry="6" /></g>
-        <path class="nose" d="M56 65h8l-4 5Z" />
-        <path class="whiskers" d="M30 66 8 62M30 72 8 74M90 66l22-4M90 72l22 2" />
-        <path class="collar" d="M23 78 Q60 90 97 78 L93 94 Q60 105 27 94Z" />
-        <path class="collar-edge" d="M25 81 Q60 92 95 81" />
-        <text class="collar-name" x="60" y="92" text-anchor="middle">JAVA</text>
-      </svg>
-    </button>
-    <span class="bubble" role="status" [class.show]="visible()">{{ text() }}</span>
-  `,
+  templateUrl: './java-cat.component.html',
 })
-export class JavaCat {
+export class JavaCatComponent {
   private readonly cat = viewChild.required<ElementRef<HTMLElement>>('cat');
   private readonly lines = ['¡Miau, comandante!', 'Prrr…', 'Java, lista para la misión.'];
   private clicks = 0;
