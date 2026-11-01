@@ -133,10 +133,13 @@
 
   <section id="contacto" class="section band contact">
     <div class="wrap">
-      <p class="section-kicker">05 / SIGUIENTE MISIÓN</p>
+      <p class="section-kicker">04 / SIGUIENTE MISIÓN</p>
       <h2>Contacto</h2>
       <p>Si quieres conocer mi trayectoria o hablar de una colaboración, escríbeme.</p>
-      <a class="mail" [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+      <div class="contact-links">
+        <a class="mail" [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+        <a class="btn" [href]="contact.github" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </div>
   </section>
 </main>

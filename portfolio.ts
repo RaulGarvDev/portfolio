@@ -24,7 +24,7 @@ export interface Project {
 }
 
 export const CONTACT = {
-  email: 'raulgonzalezdelaaleja@gmail.com',
+  email: 'raulgarvdev@gmail.com',
   linkedin: 'https://www.linkedin.com/in/raul-gonzalez-de-la-aleja-ruiz-valdepenas-programador/',
   github: 'https://github.com/RaulGarvDev',
 } as const;
