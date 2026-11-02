@@ -218,3 +218,98 @@ h2 {
     animation-iteration-count: 1 !important;
   }
 }
+
+.hero .bar,
+.hero .hero-grid,
+.hero app-java-cat {
+  position: relative;
+  z-index: 1;
+}
+
+.hero app-java-cat {
+  position: absolute;
+}
+
+.hero .bar-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+
+.hero .ambience-toggle {
+  padding: .55rem .75rem;
+  border: 1px solid rgb(98 188 255 / .5);
+  border-radius: 2px;
+  color: #b9e4ff;
+  background: rgb(98 188 255 / .08);
+  font: 500 .78rem var(--mono);
+  cursor: pointer;
+}
+
+.hero .ambience-toggle:hover {
+  border-color: var(--signal);
+  background: rgb(98 188 255 / .16);
+}
+
+.hero .ambience-toggle:disabled {
+  cursor: wait;
+  opacity: .7;
+}
+
+.hero .ambience-status {
+  color: rgb(245 245 233 / .65);
+  font: .65rem/1.4 var(--mono);
+}
+
+.hero .ambience-credit {
+  flex-basis: 100%;
+  color: rgb(245 245 233 / .55);
+  font-size: .65rem;
+  line-height: 1.4;
+}
+
+.hero .ambience-credit a {
+  color: #b9e4ff;
+}
+
+.hero .fleet-art {
+  position: absolute;
+  top: 10rem;
+  right: -2rem;
+  z-index: 0;
+  width: min(74vw, 66rem);
+  height: auto;
+  overflow: visible;
+  opacity: .13;
+  pointer-events: none;
+}
+
+.hero .fleet-art__ship {
+  fill: #b9dfff;
+  filter: drop-shadow(0 0 10px rgb(98 188 255 / .55));
+}
+
+.hero .fleet-art__ship--distant {
+  opacity: .6;
+}
+
+.hero .fleet-art__detail {
+  fill: none;
+  stroke: #07101d;
+  stroke-width: 3;
+}
+
+.hero .fleet-art__engine {
+  fill: #62bcff;
+  filter: drop-shadow(0 0 8px #62bcff);
+}
+
+@media (max-width: 52rem) {
+  .hero .fleet-art { top: 12rem; right: -15%; width: 95vw; }
+}
+
+@media (max-width: 38rem) {
+  .hero .ambience-toggle { font-size: .7rem; }
+  .hero .ambience-status { flex-basis: 100%; }
+}

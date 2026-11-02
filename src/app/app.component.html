@@ -2,6 +2,20 @@
 
 <section id="inicio" class="hero band">
   <div class="wrap inner">
+    <svg class="fleet-art" viewBox="0 0 1100 390" aria-hidden="true" focusable="false">
+      <g class="fleet-art__ship fleet-art__ship--distant" transform="translate(680 12) scale(.62)">
+        <path d="M25 100 315 28l160 39v66l-160 39z" />
+        <path class="fleet-art__detail" d="m52 100 263-57m-263 57 263 57m0-114v114m12-108h88v102h-88z" />
+        <path class="fleet-art__detail" d="M345 72v56m16-52v48m-44-78v110" />
+        <path class="fleet-art__engine" d="M475 75h19v12h-19zm0 38h19v12h-19z" />
+      </g>
+      <g class="fleet-art__ship" transform="translate(70 74)">
+        <path d="M25 100 315 28l160 39v66l-160 39z" />
+        <path class="fleet-art__detail" d="m52 100 263-57m-263 57 263 57m0-114v114m12-108h88v102h-88z" />
+        <path class="fleet-art__detail" d="M345 72v56m16-52v48m-44-78v110" />
+        <path class="fleet-art__engine" d="M475 75h19v12h-19zm0 38h19v12h-19z" />
+      </g>
+    </svg>
     <header class="bar rise rise--0">
       <a class="signature" href="#inicio" aria-label="Inicio, Raúl González de la Aleja">
         <span class="signature-mark" aria-hidden="true">RG</span>
@@ -16,7 +30,22 @@
         }
         <a href="#contacto">Contacto</a>
       </nav>
-      <button class="theme-toggle" type="button" (click)="theme.toggle()">{{ theme.nextLabel() }}</button>
+      <div class="bar-controls">
+        <button class="theme-toggle" type="button" (click)="theme.toggle()">{{ theme.nextLabel() }}</button>
+        <button
+          class="ambience-toggle"
+          type="button"
+          [disabled]="ambienceStarting()"
+          [attr.aria-pressed]="ambienceEnabled()"
+          (click)="toggleAmbience()"
+        >
+          {{ ambienceStarting() ? 'Cargando música...' : ambienceEnabled() ? 'Pausar música' : 'Reproducir música' }}
+        </button>
+        <span class="ambience-status" role="status">{{ ambienceStatus() }}</span>
+        <audio #ambienceAudio loop preload="none" aria-hidden="true">
+          <source src="/assets/audio/luis_humanoide-star-wars-style-chase-music-181118.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
     </header>
 
     <div class="hero-grid">
