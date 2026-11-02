@@ -1,3 +1,4 @@
+import { PLATFORM_ID } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { AppComponent } from './app.component';
@@ -28,6 +29,35 @@ describe('AppComponent', () => {
     expect(fixture.nativeElement.querySelector('.ambience-status').textContent).toContain(
       'El navegador bloqueó la reproducción automática.',
     );
+  });
+
+  it('does not attempt autoplay while rendering on the server', async () => {
+    fixture.destroy();
+    playSpy.mockClear();
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      imports: [AppComponent],
+      providers: [{ provide: PLATFORM_ID, useValue: 'server' }],
+    });
+    fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    expect(playSpy).not.toHaveBeenCalled();
+    expect(fixture.nativeElement.querySelector('.ambience-status').textContent).toBe('');
+  });
+
+  it('does not throw when destroying the fixture on the server', () => {
+    fixture.destroy();
+    TestBed.resetTestingModule();
+    TestBed.configureTestingModule({
+      imports: [AppComponent],
+      providers: [{ provide: PLATFORM_ID, useValue: 'server' }],
+    });
+    fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+
+    expect(() => fixture.destroy()).not.toThrow();
   });
 
   it('plays and pauses the selected track from the manual control', async () => {

@@ -1,3 +1,4 @@
+import { isPlatformBrowser } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -5,6 +6,7 @@ import {
   DestroyRef,
   ElementRef,
   inject,
+  PLATFORM_ID,
   signal,
   ViewChild,
 } from '@angular/core';
@@ -27,6 +29,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('ambienceAudio') private ambienceAudio?: ElementRef<HTMLAudioElement>;
 
   protected readonly theme = inject(ThemeService);
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
   private readonly destroyRef = inject(DestroyRef);
   protected readonly contact = CONTACT;
   protected readonly current = EXPERIENCE.find((job) => job.current);
@@ -41,7 +44,9 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    void this.startAmbience(true);
+    if (this.isBrowser) {
+      void this.startAmbience(true);
+    }
   }
 
   protected async toggleAmbience(): Promise<void> {
@@ -102,6 +107,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   private stopAmbience(): void {
+    if (!this.isBrowser) {
+      this.ambienceEnabled.set(false);
+      return;
+    }
+
     const audio = this.ambienceAudio?.nativeElement;
     audio?.pause();
     if (audio) audio.currentTime = 0;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-eight-neon-rvd1r3ycpk.vercel.app/sitemap.xml

@@ -17,6 +17,13 @@ Código fuente: https://github.com/RaulGarvDev/portfolio
 
 Demo publicada: https://portfolio-eight-neon-rvd1r3ycpk.vercel.app/
 
+## SEO
+
+El sitio publica `robots.txt` y `sitemap.xml` desde `public/`. Si cambia el
+dominio público, actualiza sus URL en esos dos archivos y en los metadatos de
+`src/index.html`. Después de desplegar, verifica ambas rutas y añade el dominio
+a Google Search Console para enviar el sitemap y revisar indexación y consultas.
+
 ## Requisitos
 
 - Node.js `^22.22.3`, `^24.15.0` o `>=26.0.0`.
