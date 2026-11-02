@@ -59,7 +59,7 @@ describe('AppComponent', () => {
     const audio = fixture.nativeElement.querySelector('audio') as HTMLAudioElement;
     expect(audio.loop).toBe(true);
     expect(audio.querySelector('source')?.getAttribute('src')).toBe(
-      '/assets/audio/luis_humanoide-star-wars-style-chase-music-181118.mp3',
+      '/assets/audio/luis_humanoide-star-wars-style-chase-music-181118.wav',
     );
   });
 });
